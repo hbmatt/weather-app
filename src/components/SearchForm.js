@@ -55,6 +55,7 @@ export class SearchForm extends Component {
                   className={"input" + (this.state.error ? " is-danger" : "")}
                   value={this.state.zipcode}
                   onChange={this.onChange}
+                  placeholder="Enter zipcode..."
                 />
               </div>
               <div className="control">
