@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-import './App.css';
-import './reset.css';
+import './weather-icons.min.css';
 
-export class App extends Component {
+export class DisplayWeather extends Component {
   render() {
     return (
       <div>
@@ -13,4 +12,4 @@ export class App extends Component {
   }
 }
 
-export default App;
+export default DisplayWeather
