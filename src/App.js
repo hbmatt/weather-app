@@ -38,7 +38,7 @@ export class App extends Component {
           onClick={this.toggleUnits}
           style={{ position: "absolute", bottom: "5px", right: "5px" }}
         >
-          Toggle Unit
+          { this.state.unit ? "°F" : "°C" }
         </button>
       </div>
     );

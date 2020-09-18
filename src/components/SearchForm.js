@@ -10,7 +10,7 @@ export class SearchForm extends Component {
 
   getWeather = (zipcode) => {
     let that = this;
-    let unit = this.props.unit ? "imperial" : "metric"
+    let unit = this.props.unit ? "imperial" : "metric";
 
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${API_KEY}&units=${unit}`,
@@ -23,10 +23,14 @@ export class SearchForm extends Component {
         const place = response.name;
         const weatherId = response.weather[0].id;
         const desc = response.weather[0].main;
-        const temp = response.main.temp;
-        const feelsLike = response.main.feels_like;
+        const temp = that.props.unit
+          ? `${response.main.temp} °F`
+          : `${response.main.temp} °C`;
+        const feelsLike = that.props.unit
+          ? `${response.main.feels_like} °F`
+          : `${response.main.feels_like} °C`;
 
-        that.setState({ error: false })
+        that.setState({ error: false });
 
         that.props.setWeather(place, weatherId, desc, temp, feelsLike);
       })
