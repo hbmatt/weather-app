@@ -13,8 +13,8 @@ export class DisplayWeather extends Component {
         <div className="content">
           <h2 className="title">{this.props.weather.place}</h2>
           <h3 className="subtitle">{this.props.weather.desc}</h3>
-          <p>Current Temperature: {this.props.weather.temp} °{(this.props.unit === "imperial" ? 'F' : 'C')}</p>
-          <p>Feels Like: {this.props.weather.feelsLike} °{(this.props.unit === "imperial" ? 'F' : 'C')}</p>
+          <p>Current Temperature: {this.props.weather.temp} °{(this.props.unit ? 'F' : 'C')}</p>
+          <p>Feels Like: {this.props.weather.feelsLike} °{(this.props.unit ? 'F' : 'C')}</p>
         </div>
       </div>
     );

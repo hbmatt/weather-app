@@ -7,8 +7,8 @@ html {
   overflow: hidden;
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		"Helvetica", "Arial", sans-serif;
-	line-height: 1.5;
+    "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
 }
 
 #root {
@@ -17,21 +17,21 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #209CEE;
+  background-color: #209cee;
 }
 
 .item {
   padding: 20px;
-	background-color: #FEF9FF;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	border-radius: 0 0 2px 2px;
+  background-color: #fef9ff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0 0 2px 2px;
 }
 
 .item:first-child {
-	padding-bottom: 0px;
-	border-radius: 2px 2px 0 0;
+  padding-bottom: 0px;
+  border-radius: 2px 2px 0 0;
 }
 
 .is-hidden {
@@ -43,11 +43,11 @@ html {
 }
 
 .subtitle {
-	margin-bottom: 0.5rem!important;
+  margin-bottom: 0.5rem !important;
 }
 
 p {
-	margin-bottom: 0.5rem!important;
+  margin-bottom: 0.5rem !important;
 }
 
 @import "../node_modules/bulma/sass/utilities/_all.sass";

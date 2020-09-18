@@ -8,20 +8,24 @@ import "./App.scss";
 
 export class App extends Component {
   state = {
-    unit: "imperial",
+    unit: true,
     weather: {
-      place: '',
-      id: '',
-      desc: '',
-      temp: '',
-      feelsLike: '',
-    }
+      place: "",
+      id: "",
+      desc: "",
+      temp: "",
+      feelsLike: "",
+    },
   };
 
   setWeather = (place, id, desc, temp, feelsLike) => {
     this.setState({
-      weather: { place, id, desc, temp, feelsLike }
-    })
+      weather: { place, id, desc, temp, feelsLike },
+    });
+  };
+
+  toggleUnits = () => {
+    this.setState({ unit: !this.state.unit })
   };
 
   render() {
@@ -29,6 +33,13 @@ export class App extends Component {
       <div className="container">
         <DisplayWeather weather={this.state.weather} unit={this.state.unit} />
         <SearchForm setWeather={this.setWeather} unit={this.state.unit} />
+        <button
+          className="button is-rounded is-info is-light"
+          onClick={this.toggleUnits}
+          style={{ position: "absolute", bottom: "5px", right: "5px" }}
+        >
+          Toggle Unit
+        </button>
       </div>
     );
   }

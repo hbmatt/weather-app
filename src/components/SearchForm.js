@@ -10,9 +10,10 @@ export class SearchForm extends Component {
 
   getWeather = (zipcode) => {
     let that = this;
+    let unit = this.props.unit ? "imperial" : "metric"
 
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${API_KEY}&units=${that.props.unit}`,
+      `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${API_KEY}&units=${unit}`,
       { mode: "cors" }
     )
       .then((response) => {
